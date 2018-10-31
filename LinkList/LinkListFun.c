@@ -3,14 +3,14 @@
 //
 #include "LinkListNode.h"
 void InitList(LinkList *L)
-/*ÓÃÍ·Ö¸Õë³õÊ¼»¯Ò»¸öµ¥Á´±í*/
+/*ç”¨å¤´æŒ‡é’ˆåˆå§‹åŒ–ä¸€ä¸ªå•é“¾è¡¨*/
 {
     *L = (LinkList)malloc(sizeof(Node));
     (*L)->next = NULL;
 }
 
 void CreateFormHead(LinkList L)
-/*Í·²å·¨´´½¨µ¥Á´±í*/
+/*å¤´æ’æ³•åˆ›å»ºå•é“¾è¡¨*/
 {
     Node *s;
     char c;
@@ -31,7 +31,7 @@ void CreateFormHead(LinkList L)
 }
 
 void CreateFormTail(LinkList L)
-/*Î²²å·¨½¨µ¥Á´±í*/
+/*å°¾æ’æ³•å»ºå•é“¾è¡¨*/
 {
     Node *s,*r;
     r = L;
@@ -56,7 +56,7 @@ void CreateFormTail(LinkList L)
 }
 
 void PrintLinkList(LinkList L)
-//´òÓ¡µ¥Á´±íº¯Êı
+//æ‰“å°å•é“¾è¡¨å‡½æ•°
 {
     Node * p = L->next;
     int i = 0;
@@ -69,7 +69,7 @@ void PrintLinkList(LinkList L)
     printf("\n");
 }
 Node * GetUsePN(LinkList L, int i)
-/*°´ĞòºÅ²é±íº¯Êı£¬Ê¹ÓÃp->nextÅĞ¶Ï*/
+/*æŒ‰åºå·æŸ¥è¡¨å‡½æ•°ï¼Œä½¿ç”¨p->nextåˆ¤æ–­*/
 {
     int j = 0;
     Node *p = L;
@@ -95,7 +95,7 @@ Node * GetUsePN(LinkList L, int i)
 }
 
 Node * GetUseP(LinkList L, int i)
-/*°´ĞòºÅ²é±íº¯Êı£¬Ê¹ÓÃpÅĞ¶Ï*/
+/*æŒ‰åºå·æŸ¥è¡¨å‡½æ•°ï¼Œä½¿ç”¨påˆ¤æ–­*/
 {
     int j = 1;
     Node *p = L->next;
@@ -120,7 +120,7 @@ Node * GetUseP(LinkList L, int i)
     }
 }
 Node * LocateUsePN(LinkList L, ElemType key)
-/*°´Öµ²é±íº¯Êı£¬Ê¹ÓÃp->nextÅĞ¶Ï*/
+/*æŒ‰å€¼æŸ¥è¡¨å‡½æ•°ï¼Œä½¿ç”¨p->nextåˆ¤æ–­*/
 {
     Node *p = L;
     while((p->next != NULL) && (p->next->data != key))
@@ -135,7 +135,7 @@ Node * LocateUsePN(LinkList L, ElemType key)
     return p->next;
 }
 Node * LocateUseP(LinkList L, ElemType key)
-//°´Öµ²éÕÒ±íº¯Êı£¬Ê¹ÓÃpÅĞ¶Ï
+//æŒ‰å€¼æŸ¥æ‰¾è¡¨å‡½æ•°ï¼Œä½¿ç”¨påˆ¤æ–­
 {
     Node * p = L->next;
     while(p && p->data != key)
@@ -150,7 +150,7 @@ Node * LocateUseP(LinkList L, ElemType key)
     return p;
 }
 int ListLength(LinkList L)
-//Çóµ¥Á´±í³¤¶È
+//æ±‚å•é“¾è¡¨é•¿åº¦
 {
     Node *p;
     p = L->next;
@@ -163,7 +163,7 @@ int ListLength(LinkList L)
     return j;
 }
 /*int InsList(LinkList L, int i, ElemType e)
-//µ¥Á´±í²åÈë²Ù×÷
+//å•é“¾è¡¨æ’å…¥æ“ä½œ
 {
     Node *pre = L, *s;
     int j = 0;
